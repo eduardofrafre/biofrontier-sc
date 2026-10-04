@@ -425,7 +425,12 @@
     "supporting": "Y si quieres apoyar económicamente, gracias por considerarlo. La contribución va a lo que mantiene el proyecto en pie: alojamiento, acceso a los datos y el tiempo de procesarlos.",
     "freeEitherWay": "En cualquier caso, el mapa seguirá siendo gratuito y de código abierto. Aquí no hay nada detrás de un pago.",
     "scan": "O escanea este código con la cámara del móvil y dona desde allí.",
+    "scanPix": "O escanea este código Pix con la app de tu banco.",
     "continue": "Continuar a PayPal",
+    "copyPix": "Copiar código Pix",
+    "copied": "Copiado, pégalo en la app de tu banco",
+    "pixKey": "Clave Pix:",
+    "method": "Forma de pago",
     "later": "Quizás después",
     "close": "Cerrar"
   },

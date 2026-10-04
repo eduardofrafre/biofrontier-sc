@@ -289,7 +289,8 @@ that means for interpreting the output.
 
 The map is free and open source, and nothing sits behind a payment. If you want
 to help pay for hosting, data access and the time to process it, you can
-[donate by PayPal](https://www.paypal.com/donate/?hosted_button_id=N2T3FKPS2Z7DQ).
+[donate by PayPal](https://www.paypal.com/donate/?hosted_button_id=N2T3FKPS2Z7DQ)
+or, from Brazil, [by Pix](https://eduardofrafre.com/pt-br/?pay=pix#support).
 
 The frontier score's weights are an uncalibrated hypothesis. Ecologists,
 taxonomists and anyone who knows Santa Catarina's biodiversity can help
