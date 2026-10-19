@@ -57,12 +57,15 @@ export default async function RootLayout({
             Light is the default rather than the OS preference. This is a public
             map that people arrive at from a link, and it should look the same
             as the screenshot they came from; the dark theme is a choice someone
-            makes, which is then remembered. Wrapped in try/catch because
+            makes, which is then remembered. A pick made on another
+            eduardofrafre.com site comes first: it arrives in the shared
+            `theme` cookie (lib/theme-cookie, repeated here in plain JS). Wrapped in try/catch because
             localStorage throws outright in some privacy modes: a theme is not
             worth a blank page. */}
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){try{var t=localStorage.getItem('biofrontier-theme');`
+            __html: `(function(){try{var c=document.cookie.match(/(?:^|; )theme=(light|dark)(?:;|$)/);`
+              + `var t=c?c[1]:localStorage.getItem('biofrontier-theme');`
               + `if(t!=='light'&&t!=='dark'){t='light'}`
               + `var e=document.documentElement;if(t==='dark'){e.classList.add('dark')}`
               + `e.style.colorScheme=t}catch(_){}})()`,

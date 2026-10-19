@@ -2,6 +2,7 @@
 
 import { useCallback, useSyncExternalStore } from 'react'
 import type { Theme } from '@/lib/color'
+import { sharedThemeCookie } from '@/lib/theme-cookie'
 
 export const THEME_STORAGE_KEY = 'biofrontier-theme'
 
@@ -44,6 +45,9 @@ export function setTheme(theme: Theme): void {
   // Tells the browser which way to paint scrollbars, form controls and the
   // canvas behind the page; without it a dark page keeps white scrollbars.
   root.style.colorScheme = theme
+  // The shared cookie carries the pick to the eduardofrafre.com sites, and
+  // theirs back here; see lib/theme-cookie.
+  document.cookie = sharedThemeCookie(theme, location.hostname)
   try {
     localStorage.setItem(THEME_STORAGE_KEY, theme)
   } catch {
