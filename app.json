@@ -1,0 +1,84 @@
+{
+  "app": "BioFrontier SC",
+  "hosts": [
+    "biofrontier.sc.eduardofrafre.com"
+  ],
+  "hosting": {
+    "en": "Vercel (Next.js), with Supabase for data",
+    "pt": "Vercel (Next.js), com Supabase para os dados"
+  },
+  "scripts": [
+    {
+      "command": "git push (Vercel deploys main)",
+      "runs": "deploy",
+      "what": {
+        "en": "Vercel builds and deploys each push to the default branch",
+        "pt": "A Vercel monta e publica cada push na branch padrão"
+      },
+      "breaks": {
+        "en": "Merged changes never go live",
+        "pt": "Mudanças mescladas nunca vão ao ar"
+      }
+    },
+    {
+      "path": ".github/workflows/test.yml",
+      "runs": "ci",
+      "what": {
+        "en": "Runs lint and the vitest suite on pushes and pull requests",
+        "pt": "Roda o lint e os testes vitest em pushes e pull requests"
+      },
+      "breaks": {
+        "en": "A broken ranking or map can merge unnoticed",
+        "pt": "Um ranking ou mapa quebrado pode entrar sem ninguém ver"
+      }
+    },
+    {
+      "path": "scripts/fetch-occurrences.ts",
+      "runs": "hand",
+      "what": {
+        "en": "Fetches occurrence records from the sources into the data set",
+        "pt": "Busca os registros de ocorrência nas fontes para o conjunto de dados"
+      },
+      "breaks": {
+        "en": "The data stops being refreshed",
+        "pt": "Os dados deixam de ser atualizados"
+      }
+    },
+    {
+      "path": "scripts/gbif-download.ts",
+      "runs": "hand",
+      "what": {
+        "en": "Requests and downloads the GBIF export",
+        "pt": "Pede e baixa o export do GBIF"
+      },
+      "breaks": {
+        "en": "No new GBIF data",
+        "pt": "Sem dados novos do GBIF"
+      }
+    },
+    {
+      "path": "scripts/build-sensitive-taxa.ts",
+      "runs": "hand",
+      "what": {
+        "en": "Builds the list of sensitive taxa whose locations are blurred",
+        "pt": "Monta a lista de táxons sensíveis cujas localizações são borradas"
+      },
+      "breaks": {
+        "en": "Exact locations of sensitive species could be shown",
+        "pt": "Localizações exatas de espécies sensíveis poderiam aparecer"
+      }
+    },
+    {
+      "path": "scripts/compute-habitat.ts",
+      "runs": "hand",
+      "what": {
+        "en": "Computes habitat per cell; merge-habitat.ts joins it with the fallback",
+        "pt": "Calcula o habitat por célula; merge-habitat.ts junta com o fallback"
+      },
+      "breaks": {
+        "en": "Evidence-aware ranking loses its habitat input",
+        "pt": "O ranking por evidência perde a entrada de habitat"
+      }
+    }
+  ]
+}
