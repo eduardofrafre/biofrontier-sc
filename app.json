@@ -4,28 +4,8 @@
     "biofrontier.sc.eduardofrafre.com"
   ],
   "hosting": {
-    "en": "Vercel project biofrontier-sc (Next.js), with Supabase for data",
-    "pt": "Projeto Vercel biofrontier-sc (Next.js), com Supabase para os dados"
-  },
-  "docs": {
-    "decisions": [
-      "engines/science/decisions/biofrontier-community-contributions.md",
-      "core/decisions/managed-stack-default.md"
-    ],
-    "specs": [
-      "engines/science/specs/2026-06-09-biofrontier-sc-design.md",
-      "engines/science/specs/2026-09-16-biofrontier-sc-ux-review.md"
-    ],
-    "diagrams": [],
-    "playbooks": [
-      "core/playbooks/managed-web-app-stack.md",
-      "engines/science/playbooks/biofrontier-dns-and-email.md",
-      "core/playbooks/pre-launch-security.md"
-    ]
-  },
-  "board": {
-    "file": "engines/science/initiatives/biofrontier-sc.md",
-    "match": []
+    "en": "Vercel (Next.js), with Supabase for data",
+    "pt": "Vercel (Next.js), com Supabase para os dados"
   },
   "scripts": [
     {
